@@ -47,4 +47,8 @@ How to use:
       --do-test
   ```
 
+- Unzip the MRPC.zip file to run demo.
+
+***
+
 Forks and Stars are appreciated~
