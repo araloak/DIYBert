@@ -1,6 +1,6 @@
 # DIYBert
 
-This project is the modification of  a Texar example, which loads BERT to perform classification tasks. The adjustment of the original code enables users to deploy BERT to more downstream tasks more easily.
+This project is the modification of  a [Texar example](https://github.com/asyml/texar-pytorch/tree/master/examples/bert), which loads BERT to perform classification tasks. The adjustment of the original code enables users to deploy BERT to more downstream tasks more easily.
 
 Advantages of using Texar example:
 
@@ -23,9 +23,9 @@ Modifications:
 - Concurrently, DIYBert supports only classification tasks in the presented code. However it is already convenient to apply to other tasks with a little modifications. Updates are on schedule.
 - API to load local BERT model without downloading another one.
 
-How to use:
+Usage:
 
-- Before training, first convert texts into BERT required data forms and store in output_dir
+- Before training, convert texts into BERT required data forms and store in output_dir
 
   ```
   python prepare_data.py  \
@@ -51,4 +51,4 @@ How to use:
 
 ***
 
-Forks and Stars are appreciated~
+Forks and Stars are appreciated :blush: ~
