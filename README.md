@@ -22,7 +22,7 @@ This project is the modification of  a [Texar example](https://github.com/asyml/
 
 # Usage:
 
-- Before training, convert texts into BERT required data forms and store in output_dir
+- Before training, convert texts into BERT required data forms and store in data_dir
 
   ```
   python prepare_data.py  \
