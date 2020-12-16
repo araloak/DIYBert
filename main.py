@@ -27,8 +27,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 import texar.torch as tx
 
-from utils import model_utils
-from utils import data_utils
+from utils import model_utils,data_utils
 
 parser = argparse.ArgumentParser()
 parser.add_argument(
