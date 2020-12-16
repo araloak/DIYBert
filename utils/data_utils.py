@@ -18,10 +18,30 @@ This is the Data Loading Pipeline for Sentence Classifier Task adapted from:
 
 import csv
 import logging
-import os
+import os,sys
 
 import texar.torch as tx
 
+class MyLogger(object):
+    def __init__(self, filename='default.log', add_flag=True, stream=sys.stdout):
+        self.terminal = stream
+        print("filename:", filename)
+        self.filename = filename
+        self.add_flag = add_flag
+        # self.log = open(filename, 'a+')
+
+    def write(self, message):
+        if self.add_flag:
+            with open(self.filename, 'a+') as log:
+                self.terminal.write(message)
+                log.write(message)
+        else:
+            with open(self.filename, 'w') as log:
+                self.terminal.write(message)
+                log.write(message)
+
+    def flush(self):
+        pass
 
 class InputExample:
     r"""A single training/test example for simple sequence classification."""
