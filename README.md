@@ -1,5 +1,7 @@
 # DIYBert
 
+[中文](./README.zh-CN.md)
+
 This project is the modification of  a [Texar example](https://github.com/asyml/texar-pytorch/tree/master/examples/bert), which loads BERT to perform classification tasks. The adjustment of the original code enables users to deploy BERT to more downstream tasks more easily.
 
 # Advantages of using Texar example:
@@ -50,7 +52,7 @@ This project is the modification of  a [Texar example](https://github.com/asyml/
 - Unzip the MRPC.zip file to run demo.
 
 # Lisence
-[MIT](./LISENCE)
+[MIT](./LICENSE)
 
 ***
 
