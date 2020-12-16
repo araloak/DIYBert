@@ -1,5 +1,7 @@
 # DIYBert
 
+[English](./README.md)
+
 本项目是对 [Texar example](https://github.com/asyml/texar-pytorch/tree/master/examples/bert)进行的简化和修改，便于对连接在BERT下游的模型结构进行添加、修改，便于自定义数据处理类，减少不常用代码块。
 
 # Texar的优点:
