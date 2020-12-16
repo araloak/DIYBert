@@ -28,6 +28,7 @@ import torch.nn.functional as F
 import texar.torch as tx
 
 from utils import model_utils
+from utils import data_utils
 
 parser = argparse.ArgumentParser()
 parser.add_argument(
@@ -42,6 +43,9 @@ parser.add_argument(
 parser.add_argument(
     "--output-dir", default="models/",
     help="The output directory where the model checkpoints will be written.")
+parser.add_argument(
+    "--log_path", default="./logs/",
+    help="path to store log information")
 parser.add_argument(
     "--LMroot", default=r"D:\LM",
     help="path of local BERT checkpoint")
@@ -58,6 +62,8 @@ parser.add_argument(
     "--do-test", action="store_true",default=True,
     help="Whether to run test on the test set.")
 args = parser.parse_args()
+
+sys.stdout = data_utils.MyLogger(args.log_path+"training_info.txt", sys.stdout)
 
 config_data: Any = importlib.import_module(args.config_data)
 config_model: Any = importlib.import_module(args.config_model)
@@ -111,6 +117,7 @@ class DiyBert(nn.Module):
 def main() -> None:
 
     tx.utils.maybe_create_dir(args.output_dir)
+    tx.utils.maybe_create_dir(args.log_path)
 
     num_train_data = config_data.num_train_data
 
