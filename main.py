@@ -74,8 +74,8 @@ config_model_dict = {
     k: v for k, v in config_model.__dict__.items()
     if not k.startswith('__')}
 
-print(config_data_dict)
-print(config_model_dict)
+print("config_data_dict",config_data_dict)
+print("config_model_dict",config_model_dict)
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
